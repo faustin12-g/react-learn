@@ -7,6 +7,14 @@ const Expression = () => {
         student: true,
         program: 'IT'
     }
+    const dis = true
+
+    const disBtn = () => 
+    {
+        
+        return alert('The button was disabled sussessfully')
+    }
+    
     const ageCal = (age) => age>18?"Adault":"Youngest"
   return (
     <div>
@@ -15,6 +23,7 @@ const Expression = () => {
       <br />
       Matual: {ageCal(19)}
       </p>
+      <button onClick={disBtn} disabled={dis} className='bg-amber-400'><a href="">Click me</a></button>
     </div>
   )
 }

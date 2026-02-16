@@ -5,6 +5,7 @@ import Component from './components/Component'
 import Car from './components/Car'
 import ChildrenProps from './components/ChildrenProps'
 import Events from './components/Events'
+import Conditionals from './components/Conditionals'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <h1 className='text-red-500'>This is a son element inside the pros</h1>
         </ChildrenProps>
         <Events />
+        <Conditionals brand='BMW' year={4040} />
 
       </>
   )

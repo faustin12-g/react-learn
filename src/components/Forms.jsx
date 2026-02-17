@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Forms = () => {
-    const [name, useState]  = ('');
-    function handleSubmittion(e)
+    let [name, setName]  = useState('');
+    function handleChange(e)
     {
-        const typed = e.target.value
+        setName(e.target.value)
     }
+    function handleSubmit(e)
+    {
+        e.preventDefault()
+        alert(name)
+    }
+
   return (
     <div>
-        <input value={name} onChange={handleSubmittion} className='p-6' placeholder='Type your name here' />
-        <button className='bg-amber-500 p-5'>Submit a form</button>
+        <form onSubmit={handleSubmit}>
+            <input value={name} onChange={handleChange} className='p-6' placeholder='Type your name here' />
+            <button className='bg-amber-500 p-5'>Submit a form</button>
+        </form>
     </div>
   )
 }

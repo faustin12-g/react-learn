@@ -6,6 +6,7 @@ import Car from './components/Car'
 import ChildrenProps from './components/ChildrenProps'
 import Events from './components/Events'
 import Conditionals from './components/Conditionals'
+import Lists from './components/Lists'
 
 const App = () => {
   return (
@@ -21,6 +22,8 @@ const App = () => {
         </ChildrenProps>
         <Events />
         <Conditionals brand='BMW' year={4040} />
+
+        <Lists />
 
       </>
   )

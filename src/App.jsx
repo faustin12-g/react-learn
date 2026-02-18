@@ -12,7 +12,7 @@ import Forms from './components/Forms'
 const App = () => {
   return (
       < >
-        < Expression />
+        {/* < Expression />
         <Props color='White' type='Benz' />
         <Component />
         <Car type='V8' year='2021' color='Black' />
@@ -24,7 +24,7 @@ const App = () => {
         <Events />
         <Conditionals brand='BMW' year={4040} />
 
-        <Lists />
+        <Lists /> */}
         <Forms />
 
       </>

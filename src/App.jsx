@@ -8,6 +8,8 @@ import Events from './components/Events'
 import Conditionals from './components/Conditionals'
 import Lists from './components/Lists'
 import Forms from './components/Forms'
+import Rosha from './components/Header'
+import Main from './components/Main'
 
 const App = () => {
   return (
@@ -25,7 +27,9 @@ const App = () => {
         <Conditionals brand='BMW' year={4040} />
 
         <Lists /> */}
-        <Forms />
+        {/* <Forms /> */}
+        <Rosha />
+        <Main />
 
       </>
   )

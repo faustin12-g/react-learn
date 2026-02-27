@@ -10,6 +10,7 @@ import Lists from './components/Lists'
 import Forms from './components/Forms'
 import Rosha from './components/Header'
 import Main from './components/Main'
+import Count from './components/Count'
 
 const App = () => {
   return (
@@ -28,8 +29,9 @@ const App = () => {
 
         <Lists /> */}
         {/* <Forms /> */}
-        <Rosha />
-        <Main />
+        {/* <Rosha />
+        <Main /> */}
+        <Count />
 
       </>
   )

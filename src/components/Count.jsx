@@ -22,6 +22,7 @@ const Count = () => {
         <button onClick={Descrease} className='cursor-pointer bg-black text-amber-50 p-2 rounded-2xl border-2 border-amber-400'>Descrease</button>
         <h1 className='text-4xl'>{count}</h1>
         <button onClick={Increase} className='cursor-pointer bg-blue-800 text-amber-50 p-2 rounded-2xl border-2 border-amber-400'>Increate</button>
+              
     </div>
   )
 }

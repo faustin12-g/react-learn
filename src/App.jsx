@@ -11,6 +11,7 @@ import Forms from './components/Forms'
 import Rosha from './components/Header'
 import Main from './components/Main'
 import Count from './components/Count'
+import Going from './components/Going'
 
 const App = () => {
   return (
@@ -31,7 +32,8 @@ const App = () => {
         {/* <Forms /> */}
         {/* <Rosha />
         <Main /> */}
-        <Count />
+        {/* <Count /> */}
+        <Going />
 
       </>
   )

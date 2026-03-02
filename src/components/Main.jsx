@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { use } from 'react'
 
 const Main = () => {
     const [igr, setIgr] = useState('')
     let [ingrs, setIngrs] = useState([])
-    let names = ['Eric', 'Manzi', 'Cyubahiro']
+    // let names = ['Eric', 'Manzi', 'Cyubahiro']
 
     function handleSubmit(e)
     {

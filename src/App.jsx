@@ -1,41 +1,11 @@
 import React from 'react'
-import Expression from './components/Expression'
-import Props from './components/Props'
-import Component from './components/Component'
-import Car from './components/Car'
-import ChildrenProps from './components/ChildrenProps'
-import Events from './components/Events'
-import Conditionals from './components/Conditionals'
-import Lists from './components/Lists'
-import Forms from './components/Forms'
-import Rosha from './components/Header'
-import Main from './components/Main'
-import Count from './components/Count'
-import Going from './components/Going'
+import Person from './components/Person'
 
 const App = () => {
   return (
-      < >
-        {/* < Expression />
-        <Props color='White' type='Benz' />
-        <Component />
-        <Car type='V8' year='2021' color='Black' />
-        <Car type='Lamb' year='2011' color='Gray' />
-        <Car type='Benz' year='2018' color='White' />
-        <ChildrenProps>
-          <h1 className='text-red-500'>This is a son element inside the pros</h1>
-        </ChildrenProps>
-        <Events />
-        <Conditionals brand='BMW' year={4040} />
-
-        <Lists /> */}
-        {/* <Forms /> */}
-        {/* <Rosha />
-        <Main /> */}
-        {/* <Count /> */}
-        <Going />
-
-      </>
+      <div className='min-h-screen bg-slate-100 px-4 py-10 sm:px-6'>
+        <Person />
+      </div>
   )
 }
 

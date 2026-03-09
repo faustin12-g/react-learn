@@ -40,12 +40,19 @@ const Calculator = () => {
             setDisplayNum('IMPOSSIBLE')
         }
     }
+
+    function handleSign()
+    {
+        if(displayNum===0) return
+        if(displayNum.startsWith('-')) setDisplayNum(displayNum.slice(1))
+        else setDisplayNum('-'+displayNum)
+    }
   return (
     <div className='h-screen flex items-center justify-center w-80 mx-auto rounded-xl overflow-hidden'>
         <div className='bg-gray-500 text-white text-right text-5xl h-115 space-y-0.5'><div>{displayNum}</div>
             <div className='grid grid-cols-4 gap-0.5 text-black w-full'>
                 <button onClick={handleDelete} className='bg-gray-200 flex items-center justify-center p-4'>AC</button>
-                <button className='bg-gray-200 flex items-center justify-center p-4'>+/-</button>
+                <button onClick={handleSign} className='bg-gray-200 flex items-center justify-center p-4'>+/-</button>
                 <button onClick={()=>handleDisplay('%')} className='bg-gray-200 flex items-center justify-center p-4'>%</button>
                 <button onClick={()=>handleDisplay('/')} className='bg-orange-400  flex items-center justify-center p-4'>÷</button>
             </div>
@@ -70,7 +77,7 @@ const Calculator = () => {
             <div className='grid grid-cols-4 gap-0.5 text-black w-full'>
                 <button onClick={()=>handleDisplay('0')} className='bg-gray-200 flex col-span-2 items-center justify-center p-4'>0</button>
                 <button onClick={()=>handleDisplay('.')} className='bg-gray-200 flex items-center justify-center p-4'>.</button>
-                <button onClick={()=>handleEquals()} className='bg-orange-400  flex items-center justify-center p-4'>=</button>
+                <button onClick={handleEquals} className='bg-orange-400  flex items-center justify-center p-4'>=</button>
             </div>
             
         </div>

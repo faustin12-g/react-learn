@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import { evaluate } from 'mathjs'
+
 
 const Calculator = () => {
     const [displayNum, setDisplayNum] = useState('0')
-    const [result, setResult] = useState(null)
+    const [pov_nev_toggle, set_pov_nev_toggle] = useState('')
 
 
     function handleDisplay(value)
@@ -26,13 +28,25 @@ const Calculator = () => {
             setDisplayNum(displayNum.slice(0,-1))
         }
     }
+
+    function handleEquals()
+    {
+        try{
+            const result = Number((evaluate(displayNum)).toFixed(10))
+            setDisplayNum(String(result))
+        }
+        catch
+        {
+            setDisplayNum('IMPOSSIBLE')
+        }
+    }
   return (
     <div className='h-screen flex items-center justify-center w-80 mx-auto rounded-xl overflow-hidden'>
         <div className='bg-gray-500 text-white text-right text-5xl h-115 space-y-0.5'><div>{displayNum}</div>
             <div className='grid grid-cols-4 gap-0.5 text-black w-full'>
                 <button onClick={handleDelete} className='bg-gray-200 flex items-center justify-center p-4'>AC</button>
                 <button className='bg-gray-200 flex items-center justify-center p-4'>+/-</button>
-                <button className='bg-gray-200 flex items-center justify-center p-4'>%</button>
+                <button onClick={()=>handleDisplay('%')} className='bg-gray-200 flex items-center justify-center p-4'>%</button>
                 <button onClick={()=>handleDisplay('/')} className='bg-orange-400  flex items-center justify-center p-4'>÷</button>
             </div>
             <div className='grid grid-cols-4 gap-0.5 text-black w-full'>
@@ -56,7 +70,7 @@ const Calculator = () => {
             <div className='grid grid-cols-4 gap-0.5 text-black w-full'>
                 <button onClick={()=>handleDisplay('0')} className='bg-gray-200 flex col-span-2 items-center justify-center p-4'>0</button>
                 <button onClick={()=>handleDisplay('.')} className='bg-gray-200 flex items-center justify-center p-4'>.</button>
-                <button className='bg-orange-400  flex items-center justify-center p-4'>=</button>
+                <button onClick={()=>handleEquals()} className='bg-orange-400  flex items-center justify-center p-4'>=</button>
             </div>
             
         </div>

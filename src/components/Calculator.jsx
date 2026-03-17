@@ -5,9 +5,6 @@ import { evaluate } from 'mathjs'
 
 const Calculator = () => {
     const [displayNum, setDisplayNum] = useState('0')
-    const [pov_nev_toggle, set_pov_nev_toggle] = useState('')
-
-
     function handleDisplay(value)
     {
         if(displayNum==='0')

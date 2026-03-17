@@ -5,6 +5,8 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Shown from './components/Shown'
 import Calculator from './components/Calculator'
+import Todo from './components/Todo'
+import Effect from './components/Effect'
 
 const App = () => {
   return (
@@ -16,7 +18,9 @@ const App = () => {
         {/* <Header />
         <Main /> */}
         {/* <Shown /> */}
-        <Calculator />
+        {/* <Calculator /> */}
+        <Todo />
+        {/* <Effect /> */}
       </>
   )
 }

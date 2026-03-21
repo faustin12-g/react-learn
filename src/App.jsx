@@ -7,6 +7,8 @@ import Shown from './components/Shown'
 import Calculator from './components/Calculator'
 import Todo from './components/Todo'
 import Effect from './components/Effect'
+import Context from './components/Context'
+import Password from './components/Password'
 
 const App = () => {
   return (
@@ -19,8 +21,10 @@ const App = () => {
         <Main /> */}
         {/* <Shown /> */}
         {/* <Calculator /> */}
-        <Todo />
+        {/* <Todo /> */}
         {/* <Effect /> */}
+        {/* <Context /> */}
+        <Password />
       </>
   )
 }

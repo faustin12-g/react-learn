@@ -8,6 +8,7 @@ const Todo = () => {
     const [userId, setUserId] = useState(1)
     const [postsLoading, setPostsLoading] = useState(false)
     const [posts, setPosts] = useState([])
+    const [showPosts, setShowPosts] = useState(true)
 
     useEffect(()=>{
         const controller = new AbortController()
@@ -67,9 +68,13 @@ const Todo = () => {
         <button onClick={()=>setUserId(3)} className='bg-amber-200 px-2 rounded-2xl border-2 text-shadow-gray-50'>User 3</button>
 
         <div>
-            <h3>Posts:</h3>
-            {postsLoading? <p>Loading posts...</p>: posts.map(post=>
-                <p key={post.id}>{post.title}</p>
+            <input type="checkbox" checked={showPosts} onChange={()=>setShowPosts(!showPosts)} />
+            {!showPosts?
+            (
+                <p>posts are hidden</p>
+            ):
+            (
+                posts.map(post=> <p key={post.id}>{post.title}</p>)
             )}
         </div>
       

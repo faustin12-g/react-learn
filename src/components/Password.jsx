@@ -1,4 +1,4 @@
-import { useReducer, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 
 export default function App() {
@@ -11,8 +11,11 @@ export default function App() {
   const [special, setSpecial] = useState(false)
   const [disabled, setDisabled] = useState(true)
 
-  
-
+  useEffect(()=>{
+    setDisabled(!(char && upper && lower && special && digit))
+  }, [char, upper, lower, digit, special]
+  )
+    
   function handleForm(e)
   {
     const value = e.target.value
@@ -50,14 +53,6 @@ export default function App() {
         else{
             setSpecial(false)
         }
-    if(char && upper && lower && special && digit)
-    {
-        setDisabled(false)
-    }
-    else
-    {
-        setDisabled(true)
-    }
     
     }
     
@@ -72,23 +67,73 @@ export default function App() {
         height: '100vh'
 
       }}>
-      <input value={password} onChange={handleForm} name='password' type={showPassword?'text': 'password'} placeholder='Enter a strong password'></input>
+        <h1 style={{
+            font: 'bold',
+            fontSize: '20px',
+
+        }}>Create secure password</h1>
+        <p style={{
+            color: 'gray'
+        }}>Enter secure password</p>
+        <div style={{
+            display: 'flex',
+            item: 'center',
+            gap: '5px'
+        }}>
+      <input 
+      style={{
+    padding: '10px 12px',         
+    border: '2px solid #ccc',      
+    borderRadius: '5px',          
+    outline: 'none',               
+    width: '250px',                
+    fontSize: '16px',              
+    transition: 'border-color 0.2s' 
+  }}
+  onFocus={e => e.target.style.borderColor = '#4CAF50'}  // green on focus
+  onBlur={e => e.target.style.borderColor = '#ccc'}
+       value={password} onChange={handleForm} name='password' type={showPassword?'text': 'password'} placeholder='Enter a strong password'></input>
 
       <input type='checkbox' onChange={()=>setShowPassword(!showPassword)}></input>
-      <br></br>
+      </div>
       <p>Requirements</p>
+              <div style={{
+            display: 'flex',
+            item: 'center',
+            gap: '5px'
+        }}>
       <input name='char' type='radio' checked={char} onChange={handleForm}></input>
       <label>At least 8 characters</label>
-      <br></br>
+      </div>
+              <div style={{
+            display: 'flex',
+            item: 'center',
+            gap: '5px'
+        }}>
       <input name='upper' type='radio' checked={upper} onChange={handleForm}></input>
       <label>Contain uppercase</label> 
-      <br></br> 
+      </div>
+              <div style={{
+            display: 'flex',
+            item: 'center',
+            gap: '5px'
+        }}>
       <input name='lower' type='radio' checked={lower} onChange={handleForm}></input>
       <label>Contain lowercase</label> 
-      <br></br> 
+      </div>
+              <div style={{
+            display: 'flex',
+            item: 'center',
+            gap: '5px'
+        }}>
       <input name='digit' type='radio' checked={digit} onChange={handleForm}></input>
       <label>Contain a digit</label>
-      <br></br>
+      </div>
+              <div style={{
+            display: 'flex',
+            item: 'center',
+            gap: '5px'
+        }}>
       <input name='special' type='radio' checked={special} onChange={handleForm}></input>
       <label>Contain a special character</label> <br></br>
         <button disabled={disabled} style={{
@@ -96,7 +141,8 @@ export default function App() {
             cursor: disabled? 'not-allowed': 'pointer',
             color: 'white',
             padding: '2px'
-        }} onClick={handleForm}>Proceed</button>
+        }} onClick={()=>alert(`Your password is ${password}`)}>Proceed</button>
+        </div>
       </form>
     </div>
   );

@@ -11,6 +11,7 @@ import Context from './components/Context'
 import Password from './components/Password'
 import Dummy from './components/dummy'
 import ListFilter from './components/ListFilter'
+import ListTodos from './components/ListTodos'
 
 const App = () => {
   return (
@@ -28,7 +29,8 @@ const App = () => {
         {/* <Context /> */}
         {/* <Password /> */}
         {/* <Dummy /> */}
-        <ListFilter />
+        {/* <ListFilter /> */}
+        <ListTodos />
       </>
   )
 }

@@ -10,6 +10,7 @@ import Effect from './components/Effect'
 import Context from './components/Context'
 import Password from './components/Password'
 import Dummy from './components/dummy'
+import ListFilter from './components/ListFilter'
 
 const App = () => {
   return (
@@ -26,7 +27,8 @@ const App = () => {
         {/* <Effect /> */}
         {/* <Context /> */}
         {/* <Password /> */}
-        <Dummy />
+        {/* <Dummy /> */}
+        <ListFilter />
       </>
   )
 }

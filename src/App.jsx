@@ -9,6 +9,7 @@ import Todo from './components/Todo'
 import Effect from './components/Effect'
 import Context from './components/Context'
 import Password from './components/Password'
+import Dummy from './components/dummy'
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
         {/* <Todo /> */}
         {/* <Effect /> */}
         {/* <Context /> */}
-        <Password />
+        {/* <Password /> */}
+        <Dummy />
       </>
   )
 }

@@ -15,6 +15,7 @@ const ListTodos = () => {
 
 return (
     <>
+    <button style={{backgroundColor:'green', color:'white', padding:'8px', borderRadius: '10px'}}>Refresh</button>
      {todos.map(item=>(
         <div key={item.id}>
             {item.title}

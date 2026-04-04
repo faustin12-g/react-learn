@@ -12,6 +12,7 @@ import Password from './components/Password'
 import Dummy from './components/dummy'
 import ListFilter from './components/ListFilter'
 import ListTodos from './components/ListTodos'
+import Counter from './components/Counter'
 
 const App = () => {
   return (
@@ -30,7 +31,8 @@ const App = () => {
         {/* <Password /> */}
         {/* <Dummy /> */}
         {/* <ListFilter /> */}
-        <ListTodos />
+        {/* <ListTodos /> */}
+        <Counter />
       </>
   )
 }

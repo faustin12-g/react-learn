@@ -13,6 +13,7 @@ import Dummy from './components/dummy'
 import ListFilter from './components/ListFilter'
 import ListTodos from './components/ListTodos'
 import Counter from './components/Counter'
+import ShoppingCart from './components/ShoppingCart'
 
 const App = () => {
   return (
@@ -32,7 +33,8 @@ const App = () => {
         {/* <Dummy /> */}
         {/* <ListFilter /> */}
         {/* <ListTodos /> */}
-        <Counter />
+        {/* <Counter /> */}
+        <ShoppingCart />
       </>
   )
 }

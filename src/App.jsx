@@ -14,6 +14,7 @@ import ListFilter from './components/ListFilter'
 import ListTodos from './components/ListTodos'
 import Counter from './components/Counter'
 import ShoppingCart from './components/ShoppingCart'
+import RefExample from './components/RefExample'
 
 const App = () => {
   return (
@@ -34,7 +35,8 @@ const App = () => {
         {/* <ListFilter /> */}
         {/* <ListTodos /> */}
         {/* <Counter /> */}
-        <ShoppingCart />
+        {/* <ShoppingCart /> */}
+        <RefExample />
       </>
   )
 }

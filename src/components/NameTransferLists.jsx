@@ -9,17 +9,19 @@ const NameTransferLists = () => {
     "Ethan Hunt",
   ]);
 
-  const [currentIndex, setCurrentIndex] = useState(0)
   const [secondList, setSecondList] = useState([]);
 
   useEffect(()=>{
     const interval = setInterval(()=>{
-      if(currentIndex < firstList.length)
+      if(firstList.length === 0)
       {
-        setSecondList(prev=>[...prev, firstList[currentIndex]])
-        setCurrentIndex(prev=>prev+1)
-        setFirstList(prev=>prev.filter((_,index)=>index !== currentIndex))
+        clearInterval(interval)
       }
+      let firstIndex = firstList[0]
+      setSecondList(prev=>[...prev, firstIndex])
+      setFirstList(prev=>prev.slice(1))
+
+
       
     },2000)
     return () => clearInterval(interval)

@@ -46,7 +46,7 @@ const App = () => {
         {/* <ShoppingCart /> */}
         {/* <RefExample /> */}
         {/* <RenderCounter /> */}
-        {/* <NameTransferLists /> */}
+        <NameTransferLists />
         {/* <Pas /> */}
         {/* <ThemeProvider >
           <ThemeChild />
@@ -54,7 +54,7 @@ const App = () => {
 
         {/* <Gate1 /> */}
         {/* <ToggleButtons /> */}
-        <Employees />
+        {/* <Employees /> */}
         
       </>
   )

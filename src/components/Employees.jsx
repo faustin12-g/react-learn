@@ -1,26 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import useFetch from './useFetch';
 
 function Employees(){
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const response = await fetch('https://dummy.restapiexample.com/api/v1/employees');
-        const result = await response.json();
-        setData(result.data);
-        setLoading(false);
-      } catch (error) {
-        setError(error); 
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const {data: names, loading, error} = useFetch('https://jsonplaceholder.typicode.com/todos')
 
   if (loading) return <p>Loading.....</p>;
   if (error) return <p>Error.....{error.message}</p>; 
@@ -28,8 +9,10 @@ function Employees(){
     <div className='App'>
       <h1>Hello React.</h1>
       <h2>Start editing to see some magic happen!</h2>
-      {data && data.map((ele) => (
-        <p>{ele.employee_name}</p>
+      {names && names.map((ele) => (
+        <div key={ele.id}>
+          <p>{ele.title}</p>
+        </div>
       ))}
     </div>
   );

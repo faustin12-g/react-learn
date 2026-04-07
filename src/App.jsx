@@ -15,6 +15,14 @@ import ListTodos from './components/ListTodos'
 import Counter from './components/Counter'
 import ShoppingCart from './components/ShoppingCart'
 import RefExample from './components/RefExample'
+import RenderCounter from './components/RenderCounter'
+import NameTransferLists from './components/NameTransferLists'
+import Pas from './components/Pas'
+import ThemeProvider from './components/ThemeProvider'
+import ThemeChild from './components/ThemeChild'
+import Gate1 from './components/Gate1'
+import ToggleButtons from './components/ToggleButtons'
+import Employees from './components/Employees'
 
 const App = () => {
   return (
@@ -36,7 +44,18 @@ const App = () => {
         {/* <ListTodos /> */}
         {/* <Counter /> */}
         {/* <ShoppingCart /> */}
-        <RefExample />
+        {/* <RefExample /> */}
+        {/* <RenderCounter /> */}
+        {/* <NameTransferLists /> */}
+        {/* <Pas /> */}
+        {/* <ThemeProvider >
+          <ThemeChild />
+        </ThemeProvider> */}
+
+        {/* <Gate1 /> */}
+        {/* <ToggleButtons /> */}
+        <Employees />
+        
       </>
   )
 }
